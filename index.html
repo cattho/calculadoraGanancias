@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Meta descripción-->
+    <meta
+      name="description"
+      content="Calculadora para obtener ganancia porcentual de productos. Calcula fácilmente tu ganancia con base en el porcentaje de aumento."
+    />
+
+    <meta property="og:title" content="Calculadora Ganancias Porcentual" />
+    <meta
+      property="og:description"
+      content="Calculadora para obtener ganancia porcentual de productos."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="http://www.tusitioweb.com" />
+    <meta property="og:image" content="http://www.tusitioweb.com/imagen.jpg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Calculadora Ganancias Porcentual" />
+    <meta
+      name="twitter:description"
+      content="Calculadora para obtener ganancia porcentual de productos."
+    />
+    <meta name="twitter:image" content="http://www.tusitioweb.com/imagen.jpg" />
+
+    <link rel="stylesheet" href="index.css" />
+    <title>Calculadora Ganancias porcentual</title>
+  </head>
+  <body>
+    <h1>CALCULADORA PARA OBTENER GANANCIA CON BASE EN EL PORCENTAJE</h1>
+    <form id="formulario">
+      <label for="porcentaje">Porcentaje de ganancia</label>
+      <input type="number" name="porcentaje" id="porcentaje" />
+
+      <label for="valorproducto">Valor del producto</label>
+      <input type="number" name="valorproducto" id="valorproducto" />
+
+      <button onclick="handleGanancia()">Calcular</button>
+
+      <p id="resultado"></p>
+    </form>
+    <noscript
+      >Debes tener JavaScript habilitado para ejecutar esta web.</noscript
+    >
+    <script src="./script.js"></script>
+  </body>
+</html>
