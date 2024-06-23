@@ -21,6 +21,11 @@ const handleGanancia = (percetange, value) => {
   if (initialPercentage === 0 || finalProductValue === 0) {
     RESULT.innerHTML = "Introduce los valores correspondientes.";
   } else {
-    RESULT.innerHTML = `$ ${finalProductValue}`;
+    const FORMATTEDVALUE = finalProductValue.toLocaleString("es-co", {
+      style: "currency",
+      currency: "COP",
+      minimumFractionDigits: 0,
+    });
+    RESULT.innerHTML = FORMATTEDVALUE;
   }
 };
