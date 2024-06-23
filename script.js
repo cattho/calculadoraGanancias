@@ -1,26 +1,26 @@
-const formulario = document.getElementById("formulario");
-const resultado = document.getElementById("resultado");
+const FORM = document.getElementById("formulario");
+const RESULT = document.getElementById("resultado");
 
-formulario.addEventListener("submit", (e) => {
+FORM.addEventListener("submit", (e) => {
   e.preventDefault();
-  let porcentajeInicial = document.getElementById("porcentaje").value;
-  let valorProducto = document.getElementById("valorproducto").value;
-  handleGanancia(porcentajeInicial, valorProducto);
+  let initialPercentage = document.getElementById("porcentaje").value;
+  let productValue = document.getElementById("valorproducto").value;
+  handleGanancia(initialPercentage, productValue);
 });
 
 //funcion de la calculadora
-const handleGanancia = (porcentaje, valor) => {
-  porcentajeInicial = Number(porcentaje);
-  valorProducto = Number(valor);
+const handleGanancia = (percetange, value) => {
+  initialPercentage = Number(percetange);
+  productValue = Number(value);
 
-  const primerPaso = 100 - porcentajeInicial;
+  const FIRSTSTEP = 100 - initialPercentage;
 
-  let valorParcialProducto = (valorProducto * primerPaso) / 100;
-  let valorFinalProducto = valorProducto + valorParcialProducto;
+  let partialProductValue = (productValue * FIRSTSTEP) / 100;
+  let finalProductValue = productValue + partialProductValue;
 
-  if (porcentajeInicial === 0 || valorFinalProducto === 0) {
-    resultado.innerHTML = "Introduce los valores correspondientes.";
+  if (initialPercentage === 0 || finalProductValue === 0) {
+    RESULT.innerHTML = "Introduce los valores correspondientes.";
   } else {
-    resultado.innerHTML = `$ ${valorFinalProducto}`;
+    RESULT.innerHTML = `$ ${finalProductValue}`;
   }
 };
