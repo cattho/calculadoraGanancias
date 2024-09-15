@@ -30,18 +30,37 @@
     <title>Calculadora Ganancias porcentual</title>
   </head>
   <body>
-    <h1>CALCULADORA PARA OBTENER GANANCIA CON BASE EN EL PORCENTAJE</h1>
-    <form id="formulario">
-      <label for="porcentaje">Porcentaje de ganancia</label>
-      <input type="number" name="porcentaje" id="porcentaje" />
+    <div class="title-container">
+      <h1>Calculadora de Ganancias</h1>
+    </div>
+    <div class="form-container">
+      <form id="formulario">
+        <label for="porcentaje">Porcentaje de ganancia</label>
+        <input
+          type="number"
+          name="porcentaje"
+          id="porcentaje"
+          autocomplete="off"
+          placeholder="Ingrese el porcentaje de ganancia deseado"
+        />
 
-      <label for="valorproducto">Valor del producto</label>
-      <input type="number" name="valorproducto" id="valorproducto" />
+        <label for="valorproducto">Valor del producto</label>
+        <input
+          type="number"
+          name="valorproducto"
+          id="valorproducto"
+          autocomplete="off"
+          placeholder="Ingrese el precio de compra del producto"
+        />
 
-      <button onclick="handleGanancia()">Calcular</button>
+        <div class="buttons-container">
+          <button onclick="handleGanancia()">Calcular</button>
+          <!-- <button id="reset">Reiniciar</button> -->
+        </div>
 
-      <p id="resultado"></p>
-    </form>
+        <p id="resultado"></p>
+      </form>
+    </div>
     <noscript
       >Debes tener JavaScript habilitado para ejecutar esta web.</noscript
     >
